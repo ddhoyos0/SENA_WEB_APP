@@ -1,0 +1,24 @@
+<h2>Listado de Profesores</h2>
+
+<table border="1px">
+  <thead >
+    <tr>
+      <th>Nombre</th>
+      <th>Correo</th>
+      <th>Fecha de Nacimiento</th>
+      <th>Programa</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @teachers.each do |teacher|%>
+    <tr>
+      <td><%= teacher.nombre %></td>
+      <td><%= teacher.correo%></td>
+      <td><%= teacher.fecha_nacimiento %></td>
+      <td><%= teacher.programa %></td> 
+
+    </tr>
+    <% end %>
+  </tbody>
+
+</table>
