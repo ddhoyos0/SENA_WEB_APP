@@ -1,0 +1,22 @@
+<h1> Añadir Estudiantes</h1>
+<form  action="/students" method="post">
+  <fieldset>
+    <label for="student[nombre]">Nombre Estudiante:</label>
+    <input type="text" name="student[nombre]">
+  </fieldset>
+  <fieldset>
+    <label for="student[correo]">Email</label>
+    <input type="text" name="student[correo]">
+  </fieldset>
+  <fieldset>
+    <label for="student[fecha_nacimiento]">Fecha de Nacimiento</label>
+    <input type="date" name="student[fecha_nacimiento]" >
+  </fieldset>
+  <fieldset>
+    <label for="student[rograma]">Programa</label>
+    <input type="text" name="student[programa]" value="programa">
+  </fieldset>
+  <fieldset>
+    <input type="submit"value= "Guardar">
+  </fieldset>
+</form>
