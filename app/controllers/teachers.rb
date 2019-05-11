@@ -7,6 +7,7 @@ class TeachersController < ApplicationController
         erb :index
     end
 
+    
     #GET /students/:id
     get "/:id" do
         id = params[:id].to_i

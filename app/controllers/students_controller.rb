@@ -20,12 +20,12 @@ class StudentsController < ApplicationController
 	def student_params
 		params[:student]
 	end
-=begin
+
 	#GET /students/:id
 	get "/:id" do
 		id = params[:id].to_i
 		@student = Student.all[id]
 		erb :show
 	end
-=end
+
 end

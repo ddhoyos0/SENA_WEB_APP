@@ -7,6 +7,7 @@
       <th>Correo</th>
       <th>Fecha de Nacimiento</th>
       <th>Programa</th>
+      <th colspan="3"></th>
     </tr>
   </thead>
   <tbody>
@@ -16,7 +17,9 @@
       <td><%= student.correo%></td>
       <td><%= student.fecha_nacimiento %></td>
       <td><%= student.programa %></td>
-
+      <td><a href="/students/show">Mostrar</a></td>
+      <td><a href="/students/edit">Editar</a></td>
+      <td><a href="/students/show">Eliminar</a></td>
     </tr>
     <% end %>
   </tbody>

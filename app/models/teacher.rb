@@ -1,4 +1,4 @@
-class Teacher <Storage::Base
+class Teacher <ActiveRecord::Base
     attr_accessor :nombre, :correo, :fecha_nacimiento, :programa
 
     def initialize(nombre,correo,fecha_nacimiento,programa)
