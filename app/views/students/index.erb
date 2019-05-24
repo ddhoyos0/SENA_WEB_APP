@@ -3,6 +3,7 @@
 <table border="1px">
   <thead >
     <tr>
+      <th>id</th>
       <th>Nombre</th>
       <th>Correo</th>
       <th>Fecha de Nacimiento</th>
@@ -13,13 +14,19 @@
   <tbody>
     <% @students.each do |student|%>
     <tr>
+      <td><%= student.id %></td>
       <td><%= student.nombre %></td>
       <td><%= student.correo%></td>
-      <td><%= student.fecha_nacimiento %></td>
+      <td><%= student.fecha %></td>
       <td><%= student.programa %></td>
-      <td><a href="/students/show">Mostrar</a></td>
+      <td><a href="/students/<%= student.id %>">Mostrar</a></td>
       <td><a href="/students/edit">Editar</a></td>
-      <td><a href="/students/show">Eliminar</a></td>
+      <td>
+        <form action="/students/<%=student.id %>"method="post">
+          <input name="_method" type="hidden" value="delete"/>
+          <input type="submit" value="Eliminar"/>
+        </form>
+      </td>
     </tr>
     <% end %>
   </tbody>

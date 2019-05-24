@@ -1,16 +1,17 @@
-require 'pg'
+require "pg"
+
 module ActiveRecord
   class Client
     def connection
-      @connection ||=PG.connect(dbname:'prueba',
-        host:'localhost',
-        port:'5432',
-        user:'deymer',    
-        password: 'deymer1990')
+      @connection ||= PG.connect(dbname: "prueba",
+                                 host: "localhost",
+                                 port: "5432",
+                                 user: "deymer",
+                                 password: "deymer1990")
     end
 
     def execute_query(query)
-      connection.exec(query).values
+      connection.exec(query)
     end
-  end  
+  end
 end
